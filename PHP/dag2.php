@@ -45,7 +45,7 @@
     elseif ($alder < 18) {
         echo "Du får ungdomsrabat";
     }
-    elseif ($alder <= 65 || $alder >= 18) {
+    elseif ($alder <= 65 && $alder >= 18) {
         echo "Du får ingen rabat";
     }
     else {
