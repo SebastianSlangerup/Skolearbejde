@@ -51,7 +51,65 @@
     else {
         echo "Du får pensionistrabat";
     }
+    echo "<hr>";
 
+        // Opgave 5
+    // Først bliver der defineret en konstant som hedder 'MYNDIG' som har en værdi på 18.
+    define("MYNDIG", 18);
+    // Derefter bliver der lavet en variabel med værdien 17.
+    $alder = 17;
+    // Så siger koden at hvis alderen ikke er lige med værdien i konstanten 'MYNDIG' (18)
+    // Jamen så skriver den at alderen ikke er 18 år.
+    if ($alder != MYNDIG) {
+        echo "Alder er ikke 18 år";
+    // Og ellers er alderen 18 år.
+    }
+    else {
+        echo "Alder er 18 år";
+    }
+    echo "<hr>";
+
+        // Opgave 6
+    // Først bliver der defineret en variabel med værdien 17.
+    $alder = 17;
+    // Derefter siger koden at hvis alderen er lige med 18.
+    // Så printer den at alderen er lige med 18.
+    if ($alder = 18) {
+        echo "Alder er 18 år";
+    }
+    // Ellers så printer den at alderen ikke er lige med 18.
+    else {
+        echo "Alder er ikke 18 år";
+    }
+    echo "<hr>";
+
+        // Opgave 7 
+    // Syntaksen er nærmest identisk med den i opgave 6.
+    // Bortset fra at der er 2 =. Det betydet at alderen SKAL være lige med 18.
+
+        // Opgave 8
+    $number = rand(1,6);
+    switch($number) {
+        case 1:
+            echo "I";
+        break;
+        case 2:
+            echo "II";
+        break;
+        case 3:
+            echo "III";
+        break;
+        case 4:
+            echo "IV";
+        break;
+        case 5:
+            echo "V";
+        break;
+        default:
+            echo "VI";
+    }
+    echo "<br>";
+    echo "Numeric number: ", $number;
     ?>
 </body>
 </html>

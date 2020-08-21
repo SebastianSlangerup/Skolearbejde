@@ -39,6 +39,7 @@
     // Opgave 5
     $minBy = "Odense";
     echo strlen($minBy);
+    echo "<hr>";
 
     // Opgave 6
     // Koden giver variablen 'i' en værdi af 10
