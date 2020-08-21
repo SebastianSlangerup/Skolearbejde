@@ -7,16 +7,17 @@
 </head>
 <body>
     <?php
+        // Opgave 1
     $maks = 10;
     $i = 1;
     $sum = 0;
 
-    while ($i <= $maks) {
+    while ($i < $maks) {
         echo $i, "<br>";
-        $sum = $i + $sum;
+        $sum += $i;
         $i++;
     }
-    echo $sum
+    echo $sum;
     ?>
 </body>
 </html>
