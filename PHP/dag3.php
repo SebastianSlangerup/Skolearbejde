@@ -84,6 +84,8 @@
     for ($i = 0; $i < 12; $i++) { 
         echo $måned[$i], " har ", $månedsLgd[$i], " dage.", "<br>";
     }
+    echo "<hr>";
+    
     ?>
 </body>
 </html>
