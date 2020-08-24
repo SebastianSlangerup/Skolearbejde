@@ -63,14 +63,14 @@
     echo "<hr>";
 
         // Opgave 1 (Arrays)
-//        $NavnListe = array('Peter','Niels','Mikkel','Flemming', 'Hans', 'Nikolaj');
-//        
-//        echo 'element nr. 0 er :'.$NavnListe[0].'<br>';
-//        echo 'element nr. 1 er :'.$NavnListe[1].'<br>';
-//        echo 'element nr. 2 er :'. $NavnListe[2].'<br>';
-//        echo 'element nr. 3 er :'. $NavnListe[3].'<br>';
-//        echo 'element nr. 4 er :'. $NavnListe[4].'<br>';
-//        echo  'element nr. 5 er :'. $NavnListe[5].'<br>';
+/*      $NavnListe = array('Peter','Niels','Mikkel','Flemming', 'Hans', 'Nikolaj');
+        
+        echo 'element nr. 0 er :'.$NavnListe[0].'<br>';
+        echo 'element nr. 1 er :'.$NavnListe[1].'<br>';
+        echo 'element nr. 2 er :'. $NavnListe[2].'<br>';
+        echo 'element nr. 3 er :'. $NavnListe[3].'<br>';
+        echo 'element nr. 4 er :'. $NavnListe[4].'<br>';
+        echo  'element nr. 5 er :'. $NavnListe[5].'<br>'; */
     
     $NavnListe = array('Peter', 'Niels', 'Mikkel', 'Hans', 'Nikolaj');
     for ($i = 0; $i < 5; $i++) { 
