@@ -6,19 +6,19 @@
     <title>Miniprojekt 3</title>
 </head>
 <body>
-    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
         email: <input type="text" name="email" />
-        <input type="submit" />
+        <input type="submit" value="Tryk den i bund!!!" />
     </form>
     
     <?php
-    echo $_POST['email'], "<br>";
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST['email'];
-        if ($email < 7) {
+        if (strlen($email) < 7) {
             echo "Email er for kort.";
         }
-        else if ($email > 30) {
+        else if (strlen($email) > 30) {
             echo "Email er for lang.";
         }
         else if (strpos($email, "@") == false) {
