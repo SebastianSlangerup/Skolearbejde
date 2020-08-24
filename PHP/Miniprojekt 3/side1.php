@@ -24,6 +24,9 @@
         else if (strpos($email, "@") == false) {
             echo "Indtast gyldig email. (@ mangler)";
         }
+/*         else if (strpos($email, "gmail") == false) {
+            echo "Indtast venligst et domæne";
+        } */
         else if (strpos($email, ".dk") == false) {
             echo "Indtast gyldig email. (.dk mangler)";
         }
