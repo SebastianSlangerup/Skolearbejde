@@ -85,7 +85,7 @@
 
         // Opgave 7 
     // Syntaksen er nærmest identisk med den i opgave 6.
-    // Bortset fra at der er 2 =. Det betydet at alderen SKAL være lige med 18.
+    // Bortset fra at der er 2 =. Det betyder at alderen SKAL være lige med 18.
 
         // Opgave 8
     $number = rand(1,6);
