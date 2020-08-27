@@ -6,14 +6,17 @@
     <title>Miniprojekt 2 Side 1</title>
 </head>
 <body>
+    <?php 
+    $tal = rand(1,100);
+    echo $tal;
+    ?>
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
         input: <input type="text" name="input" />
         <input type="submit" value="Tryk den i bund!!!" />
     </form>
     <?php
-    
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $tal = rand(1,100);
         $input = $_POST['input'];
         
         if ($input == $tal) {
@@ -31,7 +34,6 @@
         else {
             echo "Tampen brænder!";
         }
-        echo $tal;
     }
     ?>
     
