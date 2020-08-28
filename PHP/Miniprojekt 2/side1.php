@@ -8,6 +8,7 @@
 <body>
     <?php 
     session_start();
+    $_SESSION['finished'] = false;
     if (isset($_SESSION['input'])) {
         $_SESSION['input']++;
     }
@@ -16,9 +17,7 @@
         $_SESSION['number'] = rand(1,100);
     }
     if ($_SESSION['input'] >= 10) {
-        echo "Du har ikke flere forsøg";
-        session_destroy();
-        $_SESSION['number'] = rand(1,100);
+        $_SESSION['finished'] = true;
     }
     ?>
     <form action="side2.php" method="GET">

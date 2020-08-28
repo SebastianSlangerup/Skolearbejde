@@ -11,28 +11,40 @@
     $input = $_GET['input'];
     $number = $_SESSION['number'];
     
+
+
     if ($number != $input) {
-        echo "Du har brugt ", $_SESSION['input'], " forsøg. Du har ", abs($_SESSION['input']-10), " forsøg tilbage.";
+        echo "You have used ", $_SESSION['input'], " attempts. You have ", abs($_SESSION['input']-10), " attempts left.", "<br>";
     }
-    if ($number == $input) {
+    if ($_SESSION['finished'] == false) {
+        if ($number == $input) {
         echo "Correct guess!", "<br>";
-        session_destroy();
-        echo "Du har i alt brugt ", $_SESSION['input'], " forsøg. Dine forsøg nulstilles.";
-    }
-    elseif ($input < 0 || $input > 100) {
+        echo "You have used a total of ", $_SESSION['input'], " guesses. Your guesses will be reset.", "<br>";
+        $_SESSION['finished'] = true;
+        }
+        elseif ($input < 0 || $input > 100) {
         echo "Invalid Range (1,100)", "<br>";
-    }
-    elseif (abs($input - $number) > 50) {
+        }
+        elseif (abs($input - $number) > 50) {
         echo "Very far off", "<br>";
-    }
-    elseif (abs($input - $number) > 19 && abs($input - $number) < 49) {
+        }
+        elseif (abs($input - $number) > 19 && abs($input - $number) < 49) {
         echo "You're getting closer", "<br>";
-    }
-    else {
+        }
+        else {
         echo "You are really close!", "<br>";
+        }
+    }
+    
+    if ($_SESSION['finished'] == true) {
+        echo "Game over", "<br>";
+        echo "The number was ", $number;
+        session_destroy();
     }
     echo "<br>";
-    echo "The number you guessed was ", $input, ". and the number was REDACTED.";
+    
+
+
 
     ?>
 </body>
