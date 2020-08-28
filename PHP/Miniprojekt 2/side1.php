@@ -7,35 +7,13 @@
 </head>
 <body>
     <?php 
-    $tal = rand(1,100);
-    echo $tal;
+    session_start();
+    $_SESSION['number'] = rand(1,100);
     ?>
-    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+    <form action="side2.php" method="GET">
         input: <input type="text" name="input" />
-        <input type="submit" value="Tryk den i bund!!!" />
+        <input type="submit" value="Press the GODDAMN BUTTON!" />
     </form>
-    <?php
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $input = $_POST['input'];
-        
-        if ($input == $tal) {
-            echo "Rigtig flot gættet";
-        }
-        elseif ($input < 0 || $input > 100) {
-            echo "Ude for angivne rækkevide (1,100)";
-        }
-        elseif (abs($input) > 50) {
-            echo "Meget langt forbi";
-        }
-        elseif (abs($input > 19 && abs($input < 49))) {
-            echo "Du er ikke helt ved siden af";
-        }
-        else {
-            echo "Tampen brænder!";
-        }
-    }
-    ?>
-    
+    <?php echo $_SESSION['number']; ?>
 </body>
 </html>
