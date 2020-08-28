@@ -10,23 +10,29 @@
     session_start();
     $input = $_GET['input'];
     $number = $_SESSION['number'];
+    
+    if ($number != $input) {
+        echo "Du har brugt ", $_SESSION['input'], " forsøg. Du har ", abs($_SESSION['input']-10), " forsøg tilbage.";
+    }
     if ($number == $input) {
-        echo "Correct guess!";
+        echo "Correct guess!", "<br>";
+        session_destroy();
+        echo "Du har i alt brugt ", $_SESSION['input'], " forsøg. Dine forsøg nulstilles.";
     }
     elseif ($input < 0 || $input > 100) {
-        echo "Invalid Range (1,100)";
+        echo "Invalid Range (1,100)", "<br>";
     }
     elseif (abs($input - $number) > 50) {
-        echo "Very far off";
+        echo "Very far off", "<br>";
     }
     elseif (abs($input - $number) > 19 && abs($input - $number) < 49) {
-        echo "You're getting closer";
+        echo "You're getting closer", "<br>";
     }
     else {
-        echo "You are really close!";
+        echo "You are really close!", "<br>";
     }
     echo "<br>";
-    echo "The number you guessed was ", $input, ". and the number was ", $number, ".";
+    echo "The number you guessed was ", $input, ". and the number was REDACTED.";
 
     ?>
 </body>

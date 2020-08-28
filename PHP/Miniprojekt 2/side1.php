@@ -8,7 +8,18 @@
 <body>
     <?php 
     session_start();
-    $_SESSION['number'] = rand(1,100);
+    if (isset($_SESSION['input'])) {
+        $_SESSION['input']++;
+    }
+    else {
+        $_SESSION['input'] = 1;
+        $_SESSION['number'] = rand(1,100);
+    }
+    if ($_SESSION['input'] >= 10) {
+        echo "Du har ikke flere forsøg";
+        session_destroy();
+        $_SESSION['number'] = rand(1,100);
+    }
     ?>
     <form action="side2.php" method="GET">
         input: <input type="text" name="input" />
