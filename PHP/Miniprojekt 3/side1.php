@@ -21,8 +21,8 @@
         else if (strlen($email) > 30) {
             echo "Email er for lang.";
         }
-        else if (strpos($email, "@") == false) {
-            echo "Indtast gyldig email. (@ mangler)";
+        else if (substr_count($email, "@") != 1) {
+            echo "Indtast gyldig email. (@ skal være én)";
         }
 /*         else if (strpos($email, "gmail") == false) {
             echo "Indtast venligst et domæne";
