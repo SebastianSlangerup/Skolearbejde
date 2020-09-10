@@ -6,7 +6,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="form1" method="POST" action="checklogin.php">
+    <form name="form1" method="POST" action="checklogin.php">
         <table width="150px" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFF">
         <tr>
             <td colspan="3"><strong>Medlems Login </strong></td>

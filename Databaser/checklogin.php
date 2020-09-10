@@ -8,7 +8,7 @@
 <body>
     <?php
         session_start();
-        $host = "localhost:8080";
+        $host = "localhost";
         $username = "root";
         $password = "";
         $db_name = "login";
