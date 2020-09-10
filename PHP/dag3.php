@@ -13,7 +13,7 @@
     $sum = 0;
 
     while ($i < $maks) {
-        echo $i, "<br>";
+        echo $sum, "<br>";
         $sum += $i;
         $i++;
     }
@@ -27,7 +27,7 @@
 
     // Do-loops vil altid kører mindst én gang
     do {
-        echo $i, "<br>";
+        echo $sum, "<br>";
         $sum += $i;
         $i++;
     } while ($i < $maks);
@@ -35,9 +35,9 @@
     echo "<hr>";
 
         // Opgave 3
-    $sum=0;
+    $sum = 0;
     for ($i = 1; $i < $maks; $i++) { 
-        echo $i, "<br>";
+        echo $sum, "<br>";
         $sum += $i;
     }
     echo $sum;

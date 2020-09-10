@@ -29,7 +29,7 @@
         $count = mysqli_num_rows($resultat);
 
             if ($count == 1) {
-                $_SESSION['login'];
+                $_SESSION['login'] = 1;
                 header("location:correct_login.php");
             }
             else {
